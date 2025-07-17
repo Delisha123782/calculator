@@ -22,21 +22,22 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
-choice_1=input("you're cross the road.where do you want to go:?\ntype left or right").lower()
+choice_1 = input("you're cross the road.where do you want to go:?\ntype left or right").lower()
 if choice_1 == "left":
-     choice_2=input('you\'ve come to a lake.There is an island in the lake,'
-          'Type "wait" for wait a boat or "swim" to swim accross the lake').lower()
-else:
-    print("Game Over")
+    choice_2 = input('you\'ve come to a lake.There is an island in the lake,'
+                     'Type "wait" for wait a boat or "swim" to swim accross the lake').lower()
+    if choice_2 == "wait":
+        choice_3 = input("you reached the river unharmed.There is three door infront of you."
+                          "which door do you choose:?RED ,YELLOW, BLACK")
 
-choice_3=input("you reached the river unharmed.There is three door infront of you."
-              " which door do you choose:? red,yellow,black")
+        if choice_3 == "red":
+                         print("room has full of fire.Game over")
+        elif choice_3 == "black":
+                        print("it has most terrible room.Game over")
+        elif choice_3 == "yellow":
+                         print("it is golden room.you win")
+    else:
+        print("you got in trouble.GAME OVER!")
 
-if choice_3=="red":
-    print("room has full of fire.Game over")
-elif choice_3=="black":
-    print("it has most terrible room.Game over")
-elif choice_3=="yellow":
-    print("it is golden room.you win")
 else:
-    print("Game Over")
+    print("you got in trouble.GAME OVER!")
